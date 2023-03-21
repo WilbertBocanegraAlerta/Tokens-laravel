@@ -1,0 +1,30 @@
+{
+    "type": "Ext.app.Application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "models": [
+            "MyModel",
+            "MyModel1"
+        ],
+        "name": "app",
+        "views": [
+            "App",
+            "Admin",
+            "User",
+            "Login",
+            "Task"
+        ]
+    },
+    "configAlternates": {
+        "name": "string",
+        "views": "typedarray",
+        "models": "typedarray",
+        "stores": "typedarray"
+    },
+    "name": "Application",
+    "designerId": "application"
+}

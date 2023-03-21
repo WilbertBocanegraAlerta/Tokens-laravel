@@ -1,0 +1,425 @@
+{
+    "type": "Ext.container.Viewport",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "admin",
+        "designer|userClassName": "Admin",
+        "height": 250,
+        "style": "background:white;",
+        "width": 400
+    },
+    "configAlternates": {
+        "container|align": "string",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "height": "auto",
+        "layout": "string",
+        "width": "auto",
+        "style": "string"
+    },
+    "name": "MyViewport",
+    "designerId": "16641b5c-3fda-4b3a-977d-b35aeafec0a8",
+    "viewControllerInstanceId": "8f07139b-f6db-481b-925c-642e974b857f",
+    "viewModelInstanceId": "f29f9f38-598c-482a-bca5-7f6144ddea32",
+    "cn": [
+        {
+            "type": "Ext.container.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "container|align": "stretch",
+                "designer|displayName": "AppBar",
+                "height": 60,
+                "layout": "hbox"
+            },
+            "configAlternates": {
+                "container|align": "string",
+                "designer|displayName": "string",
+                "height": "auto",
+                "layout": "string"
+            },
+            "name": "MyContainer2",
+            "designerId": "80b41fde-1261-4b81-bc02-50a0616ab5a6",
+            "cn": [
+                {
+                    "type": "Ext.container.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "container|align": "stretch",
+                        "designer|displayName": "Left",
+                        "layout": "vbox",
+                        "layout|flex": 1,
+                        "style": "padding:10px 0 10px 20px;"
+                    },
+                    "configAlternates": {
+                        "designer|displayName": "string",
+                        "layout|flex": "number",
+                        "container|align": "string",
+                        "layout": "string",
+                        "style": "string"
+                    },
+                    "name": "MyContainer6",
+                    "designerId": "1b62c9a9-58ac-499b-94e5-8c192c32b262",
+                    "cn": [
+                        {
+                            "type": "Ext.form.Label",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "id": "title-admin-user",
+                                "layout|flex": 1
+                            },
+                            "configAlternates": {
+                                "id": "string",
+                                "layout|flex": "number"
+                            },
+                            "name": "MyLabel3",
+                            "designerId": "eddda509-101c-4751-bab9-294e497ecdbd"
+                        },
+                        {
+                            "type": "Ext.form.Label",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "id": "title-admin-rol",
+                                "layout|flex": 1
+                            },
+                            "configAlternates": {
+                                "id": "string",
+                                "layout|flex": "number"
+                            },
+                            "name": "MyLabel4",
+                            "designerId": "f4e056ca-f62d-4366-90c2-f30c7e0dcba7"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.container.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "container|align": "stretch",
+                        "container|pack": "end",
+                        "designer|displayName": "Right",
+                        "layout": "hbox",
+                        "layout|flex": 1,
+                        "style": "padding:5px; text-transform:uppercase; letter-spacing:0.1;"
+                    },
+                    "configAlternates": {
+                        "designer|displayName": "string",
+                        "layout|flex": "number",
+                        "container|align": "string",
+                        "container|pack": "string",
+                        "layout": "string",
+                        "style": "string"
+                    },
+                    "name": "MyContainer7",
+                    "designerId": "e6a7b123-b0ff-4b8b-af4b-2fc4c2040fcc",
+                    "cn": [
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "style": "border-radius:10px;",
+                                "text": "cerrar sesión"
+                            },
+                            "configAlternates": {
+                                "style": "string",
+                                "text": "string"
+                            },
+                            "name": "MyButton1",
+                            "designerId": "e7e79989-4d9c-473c-97f7-1ab346d729b6",
+                            "cn": [
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "singin",
+                                        "implHandler": [
+                                            "const access_token = localStorage.getItem('access_token');;",
+                                            "",
+                                            "Ext.Ajax.request({",
+                                            "    url:'http://auth.test/api/auth/logout',",
+                                            "    method:\"POST\",",
+                                            "    headers:{",
+                                            "      'Authorization':`Bearer ${access_token}`",
+                                            "    },",
+                                            "    success:(response)=>{",
+                                            "        const result = Ext.decode(response.responseText);",
+                                            "        this.getView().destroy();",
+                                            "        localStorage.removeItem('access_token');",
+                                            "        localStorage.removeItem('ttl');",
+                                            "",
+                                            "        Ext.create('app.view.App').show();",
+                                            "",
+                                            "    },",
+                                            "    failure:(response)=>{",
+                                            "        const result = Ext.decode(response.responseText);",
+                                            "        console.log(result);",
+                                            "    }",
+                                            "});",
+                                            "",
+                                            "",
+                                            ""
+                                        ],
+                                        "name": "click",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "singin",
+                                    "designerId": "c2f2c2a6-3aee-402b-9439-ad80f8e9b477"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.container.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "container|align": "stretch",
+                "designer|displayName": "Main",
+                "flex": 1,
+                "layout": "vbox"
+            },
+            "configAlternates": {
+                "designer|displayName": "string",
+                "flex": "number",
+                "container|align": "string",
+                "layout": "string"
+            },
+            "name": "MyContainer3",
+            "designerId": "0e35ce39-ce34-42e4-80db-5446acef96b7",
+            "cn": [
+                {
+                    "type": "Ext.grid.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "Users",
+                        "flex": 1,
+                        "id": "table-user",
+                        "title": "Usuarios"
+                    },
+                    "configAlternates": {
+                        "designer|displayName": "string",
+                        "title": "string",
+                        "flex": "number",
+                        "id": "string"
+                    },
+                    "name": "MyGridPanel",
+                    "designerId": "f1e0eb36-3361-439a-a3a3-63d5f63e2034",
+                    "cn": [
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "name",
+                                "flex": 1,
+                                "text": "Nombre"
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "flex": "number",
+                                "text": "string"
+                            },
+                            "name": "MyColumn",
+                            "designerId": "2f4f0f9f-0f06-4fe3-a1aa-36ea1610ba94"
+                        },
+                        {
+                            "type": "Ext.view.Table",
+                            "reference": {
+                                "name": "viewConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "name": "MyTable",
+                            "designerId": "3eb047b2-332a-4d92-8b55-49819f095aec"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "lastname",
+                                "flex": 1,
+                                "text": "Apellido"
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "flex": "number",
+                                "text": "string"
+                            },
+                            "name": "MyColumn3",
+                            "designerId": "40197a18-6194-4145-b306-ce6ee21ffebd"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "email",
+                                "flex": 1,
+                                "text": "Correo"
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "flex": "number",
+                                "text": "string"
+                            },
+                            "name": "MyColumn4",
+                            "designerId": "82bdff4a-b6e8-4fd1-b753-7524c2676672"
+                        },
+                        {
+                            "type": "Ext.grid.column.Action",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|displayName": "delete"
+                            },
+                            "configAlternates": {
+                                "designer|displayName": "string"
+                            },
+                            "name": "MyActionColumn",
+                            "designerId": "b9996544-2116-434e-ae0c-a858add65f98",
+                            "cn": [
+                                {
+                                    "type": "actioncolumnitem",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "name": "MyActionColumnItem",
+                                    "designerId": "83e2ece7-9679-4f12-9cf3-b18a8a494265"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "viewcontrollereventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onViewportAfterRender",
+                "implHandler": [
+                    "const access_token = localStorage.getItem('access_token');",
+                    "const title = Ext.getCmp('title-admin-user');",
+                    "const role = Ext.getCmp('title-admin-rol');",
+                    "const table = Ext.getCmp('table-user');",
+                    "",
+                    "//myaccount",
+                    "Ext.Ajax.request({",
+                    "    url:'http://auth.test/api/auth/myaccount',",
+                    "    method:'POST',",
+                    "    headers:{",
+                    "        'Authorization':`Bearer ${access_token}`",
+                    "    },",
+                    "    success:(response)=>{",
+                    "        const result = Ext.decode(response.responseText);",
+                    "        console.log(result);",
+                    "        title.el.dom.innerHTML = `Bienvenido ${result.data.name} ${result.data.lastname}`;",
+                    "        role.el.dom.innerHTML = `Tu rol es ${result.data.role}`;",
+                    "    },",
+                    "    failure:(response)=>{",
+                    "        const result = Ext.decode(response.responseText);",
+                    "        console.log(result);",
+                    "    }",
+                    "});",
+                    "",
+                    "//table info",
+                    "Ext.Ajax.request({",
+                    "    url:'http://auth.test/api/user/find/all',",
+                    "    headers:{",
+                    "        'Authorization':`Bearer ${access_token}`",
+                    "    },",
+                    "    success:(response)=>{",
+                    "        const result = Ext.decode(response.responseText);",
+                    "        console.log(result);",
+                    "",
+                    "        table.setStore(result.data);",
+                    "    },",
+                    "    failure:(response)=>{",
+                    "        const result = Ext.decode(response.responseText);",
+                    "        console.log(result);",
+                    "    }",
+                    "});",
+                    "",
+                    "",
+                    ""
+                ],
+                "name": "afterrender",
+                "scope": "me"
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string",
+                "scope": "string"
+            },
+            "name": "onViewportAfterRender",
+            "designerId": "c34680cd-a781-4fa2-97b0-204eb9689416"
+        }
+    ]
+}

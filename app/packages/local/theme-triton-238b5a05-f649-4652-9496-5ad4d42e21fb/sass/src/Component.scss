@@ -1,0 +1,52 @@
+
+
+.center{
+      height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+.btn-green{
+    background:#22c55e;
+    border:none !important;
+    outline:none !important;
+text-transform: uppercase !important;
+letter-spacing: 1px !important;
+    &:hover{
+        background:#22c55e;
+
+
+    &:focus{
+        background:#22c55e;
+
+    }
+     &:active{
+        background:#22c55e;
+    }
+}
+
+
+    .login-background{
+        background:#27272a;
+    }
+
+
+
+  .border-none{
+      border:0 white;
+      outline:none !important;
+      border-width:0 !important;
+  }
+
+    .title{
+       color:white !important;
+    }
+
+
+    .red{
+        color:red !important;
+        background:red !important;
+    }

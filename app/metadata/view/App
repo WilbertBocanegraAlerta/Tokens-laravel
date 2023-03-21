@@ -1,0 +1,131 @@
+{
+    "type": "Ext.container.Viewport",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "cls": [
+            "login-background"
+        ],
+        "designer|initialView": true,
+        "designer|userAlias": "app",
+        "designer|userClassName": "App",
+        "height": 250,
+        "style": "background:#27272a;",
+        "width": 400
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "height": "auto",
+        "width": "auto",
+        "cls": "typedarray",
+        "designer|initialView": "boolean",
+        "style": "string"
+    },
+    "name": "MyViewport",
+    "designerId": "e48f2632-3f27-4f31-9117-ddc5de60c126",
+    "viewControllerInstanceId": "636ef5de-e1ef-4a2a-82da-b8778459b9c6",
+    "viewModelInstanceId": "cc1c802b-84a2-4623-84ca-e9fdda23faf3",
+    "cn": [
+        {
+            "type": "viewcontrollereventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onViewportAfterRender",
+                "implHandler": [
+                    "const access_token = localStorage.getItem('access_token');",
+                    "",
+                    "",
+                    "if(!access_token){",
+                    "   Ext.create('app.view.Login').show();",
+                    "}else{",
+                    "",
+                    "Ext.Ajax.request({",
+                    "    url:'http://auth.test/api/auth/myaccount',",
+                    "    method:'POST',",
+                    "    headers:{",
+                    "        'Authorization':`Bearer ${access_token}`,",
+                    "    },",
+                    "    success:(response)=>{",
+                    "       // console.log(response.getAllResponseHeaders());",
+                    "        console.log(response);",
+                    "        const result = Ext.decode(response.responseText);",
+                    "        console.log(result);",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "           const role = result.data.role;",
+                    "         //Ext.create('app.view.Admin').show();",
+                    "",
+                    "        ",
+                    "    if(role.find((e)=>e==='user')==='user'){",
+                    "          Ext.create('app.view.User').show();",
+                    "    }",
+                    "",
+                    "    if(role.find((e)=>e==='admin')==='admin'){",
+                    "          Ext.create('app.view.Admin').show();",
+                    "    }",
+                    "",
+                    "",
+                    "    },",
+                    "    failure:(response)=>{",
+                    "        const result = Ext.decode(response.responseText);",
+                    "        console.log(result);",
+                    "    }",
+                    "});",
+                    "",
+                    "}"
+                ],
+                "name": "afterrender",
+                "scope": "me"
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string",
+                "scope": "string"
+            },
+            "name": "onViewportAfterRender",
+            "designerId": "368d21ce-567e-43cf-9eee-45e214a73ab7"
+        },
+        {
+            "type": "viewcontrollereventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onViewportBeforeRender",
+                "implHandler": [
+                    "Ext.Ajax.on('requestcomplete', function ( conn, response, options ) {",
+                    "   const { token, ttl } = response.getAllResponseHeaders();",
+                    "    ",
+                    "   if(token && ttl){",
+                    "       localStorage.setItem('ttl', ttl);",
+                    "       localStorage.setItem('access_token', token);",
+                    "   }",
+                    "});"
+                ],
+                "name": "beforerender",
+                "scope": "me"
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string",
+                "scope": "string"
+            },
+            "name": "onViewportBeforeRender",
+            "designerId": "1f988eb5-392d-4f82-9c13-2e5f770402ac"
+        }
+    ]
+}

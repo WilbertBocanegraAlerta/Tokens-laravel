@@ -1,0 +1,407 @@
+{
+    "type": "Ext.window.Window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoShow": true,
+        "bodyCls": [
+            "border-none"
+        ],
+        "border": false,
+        "cls": [
+            "border-none"
+        ],
+        "container|align": "stretch",
+        "designer|userAlias": "login",
+        "designer|userClassName": "Login",
+        "header": false,
+        "height": 250,
+        "layout": "vbox",
+        "referenceHolder": true,
+        "resizable": false,
+        "shadow": false,
+        "userCls": [
+            "border-none"
+        ],
+        "width": 400
+    },
+    "configAlternates": {
+        "autoShow": "boolean",
+        "designer|initialView": "boolean",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "header": "boolean",
+        "height": "auto",
+        "width": "auto",
+        "bodyCls": "typedarray",
+        "border": "boolean",
+        "cls": "typedarray",
+        "container|align": "string",
+        "layout": "string",
+        "referenceHolder": "boolean",
+        "resizable": "boolean",
+        "shadow": "auto",
+        "userCls": "typedarray"
+    },
+    "name": "MyWindow",
+    "designerId": "b8e1f6e7-0d12-4906-9099-b466cfd72294",
+    "viewControllerInstanceId": "00fd7c37-9ca9-48a6-90e8-e41c09f48c51",
+    "viewModelInstanceId": "f5050cbd-a17b-4a62-8dcb-af58ebc9b785",
+    "cn": [
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "bodyCls": [
+                    "border-none"
+                ],
+                "bodyPadding": 10,
+                "bodyStyle": "background:#404040;",
+                "border": false,
+                "cls": [
+                    "border-none"
+                ],
+                "container|align": "stretch",
+                "frameHeader": false,
+                "header": false,
+                "height": "100%",
+                "layout": "vbox",
+                "shadow": false,
+                "style": "background:#404040;",
+                "title": "Inicio de Sesión",
+                "userCls": [
+                    "border-none"
+                ]
+            },
+            "configAlternates": {
+                "bodyPadding": "auto",
+                "height": "auto",
+                "layout": "string",
+                "title": "string",
+                "bodyCls": "typedarray",
+                "bodyStyle": "string",
+                "border": "boolean",
+                "cls": "typedarray",
+                "container|align": "string",
+                "frameHeader": "boolean",
+                "header": "boolean",
+                "shadow": "auto",
+                "style": "string",
+                "userCls": "typedarray"
+            },
+            "name": "MyForm",
+            "designerId": "347d32d9-0138-460e-ac8c-abce574c67e0",
+            "cn": [
+                {
+                    "type": "Ext.form.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "title"
+                        ],
+                        "style": "color:white; text-align:center; margin-bottom:20px; font-size:24px; margin-top:20px;",
+                        "text": "Inicio de Sesión",
+                        "width": "100%"
+                    },
+                    "configAlternates": {
+                        "cls": "typedarray",
+                        "style": "string",
+                        "text": "string",
+                        "width": "auto"
+                    },
+                    "name": "MyLabel",
+                    "designerId": "4e97674c-5ef1-4bcc-a1d8-f25612b2440a"
+                },
+                {
+                    "type": "Ext.form.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "style": "color:white;",
+                        "text": "Correo"
+                    },
+                    "configAlternates": {
+                        "style": "string",
+                        "text": "string"
+                    },
+                    "name": "MyLabel1",
+                    "designerId": "ec6f5e9e-ecaa-4d05-b66f-5cde9835e5d0"
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "email",
+                        "fieldLabel": "Correo",
+                        "hideLabel": true,
+                        "inputType": "email",
+                        "name": "email",
+                        "style": "background:#52525b;",
+                        "validation": true,
+                        "vtype": "email"
+                    },
+                    "configAlternates": {
+                        "designer|displayName": "string",
+                        "fieldLabel": "string",
+                        "inputType": "string",
+                        "name": "string",
+                        "vtype": "string",
+                        "hideLabel": "boolean",
+                        "style": "string",
+                        "validation": "boolean"
+                    },
+                    "name": "MyTextField",
+                    "designerId": "cc1bab35-7a75-46d2-949e-b76fe07e60ed"
+                },
+                {
+                    "type": "Ext.form.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "style": "color:white;",
+                        "text": "Contraseña"
+                    },
+                    "configAlternates": {
+                        "style": "string",
+                        "text": "string"
+                    },
+                    "name": "MyLabel2",
+                    "designerId": "eb6270a7-8d30-4723-a03d-11bacc8b068d"
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "password",
+                        "fieldLabel": "Contraseña",
+                        "hideEmptyLabel": false,
+                        "hideLabel": true,
+                        "inputType": "password",
+                        "name": "password",
+                        "style": "background:#52525b !important;",
+                        "validation": true,
+                        "width": "100%"
+                    },
+                    "configAlternates": {
+                        "designer|displayName": "string",
+                        "fieldLabel": "string",
+                        "inputType": "string",
+                        "name": "string",
+                        "hideEmptyLabel": "boolean",
+                        "hideLabel": "boolean",
+                        "style": "string",
+                        "validation": "boolean",
+                        "width": "auto"
+                    },
+                    "name": "MyTextField1",
+                    "designerId": "03ed096b-ff08-4082-bc02-056b1fc8d45d"
+                },
+                {
+                    "type": "Ext.container.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout": "center"
+                    },
+                    "configAlternates": {
+                        "layout": "string"
+                    },
+                    "name": "MyContainer1",
+                    "designerId": "83244dcb-638e-40f4-9b32-1954bf9b2bb3",
+                    "cn": [
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "anchor": "",
+                                "cls": "btn-green",
+                                "designer|displayName": "Button",
+                                "style": "text-transform:uppercase; letter-spacing:1; border-witdh:0;",
+                                "text": "aceptar",
+                                "width": 200
+                            },
+                            "configAlternates": {
+                                "anchor": "string",
+                                "designer|displayName": "string",
+                                "text": "string",
+                                "width": "auto",
+                                "cls": "string",
+                                "style": "string"
+                            },
+                            "name": "MyButton",
+                            "designerId": "73d7c89b-b2d5-4ec5-845f-8cf7b3bd6295",
+                            "cn": [
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onButtonClick",
+                                        "implHandler": [
+                                            "",
+                                            "",
+                                            "const form = button.up('form').getForm();",
+                                            "const {email,password} = form.getValues();",
+                                            "",
+                                            "if(form.isValid()){",
+                                            "  Ext.Ajax.request({",
+                                            "      scope:this,",
+                                            "      url:'http://auth.test/api/auth/login',",
+                                            "      method: 'POST',",
+                                            "      params:{",
+                                            "        email,password",
+                                            "      },",
+                                            "           success: function(response){",
+                                            "               const result = Ext.decode(response.responseText);",
+                                            "            ",
+                                            "               console.log(result);",
+                                            "             ",
+                                            "              // localStorage.setItem('user-info',JSON.stringify(access_token));",
+                                            "",
+                                            "               const view = this.getView();",
+                                            "               const access_token = localStorage.getItem('access_token');",
+                                            "               console.log(access_token);",
+                                            "               view.destroy();",
+                                            "",
+                                            "",
+                                            "                Ext.Ajax.request({",
+                                            "                    url:'http://auth.test/api/auth/myaccount',",
+                                            "                    method:'POST',",
+                                            "                    headers:{",
+                                            "                        'Authorization':`Bearer ${access_token}`",
+                                            "                    },",
+                                            "                    success:(response)=>{",
+                                            "                        const result = Ext.decode(response.responseText);",
+                                            "                      const roles =  result.data.role;",
+                                            "                          if(roles.filter((e)=>e==='user')=='user'){",
+                                            "                     Ext.create('app.view.User').show();",
+                                            "                 }",
+                                            "",
+                                            "               if(roles.filter((e)=>e==='admin')=='admin'){",
+                                            "                      Ext.create('app.view.Admin').show();",
+                                            "                 }",
+                                            "                    },",
+                                            "                    failure:(response)=>{",
+                                            "                        const result = Ext.decode(response.responseText);",
+                                            "                        console.log(result);",
+                                            "                    }",
+                                            "                });",
+                                            "",
+                                            "",
+                                            "",
+                                            "           },",
+                                            "           failure: function(response)",
+                                            "           {",
+                                            "               console.log(\"QUE CHOU\",response.responseText);",
+                                            "",
+                                            "               var result = Ext.decode(response.responseText);",
+                                            "               var message=result.message;",
+                                            "               Ext.MessageBox.show({",
+                                            "                    title: 'Alerta',",
+                                            "                    msg: message,",
+                                            "                    buttons: Ext.MessageBox.OK,",
+                                            "                    //animateTarget: btn,",
+                                            "                    scope: this,",
+                                            "                    //fn: this.showResult,",
+                                            "                    icon: Ext.MessageBox.WARNING",
+                                            "               });",
+                                            "",
+                                            "           }",
+                                            "    });",
+                                            "}else{",
+                                            " Ext.Msg.alert( \"Error!\", \"Credenciales incorrectas!\" );",
+                                            "",
+                                            "}"
+                                        ],
+                                        "name": "click",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onButtonClick",
+                                    "designerId": "e8ea1a59-ed87-4172-9467-1636c7b9d05a"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "viewcontrollereventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onWindowAfterRender",
+                "implHandler": [
+                    "",
+                    "/*const store = JSON.parse(localStorage.getItem('user-info'));",
+                    "if(store){",
+                    "    if(store.data.role.find((e)=>e==='user')==='user'){",
+                    "            Ext.create('app.view.User').show();",
+                    "    }",
+                    "      if(store.data.role.find((e)=>e==='admin')==='admin'){",
+                    "            Ext.create('app.view.Admin').show();",
+                    "",
+                    "    }",
+                    "}else{",
+                    "    Ext.create('app.view.App').show();",
+                    "}",
+                    "*/"
+                ],
+                "name": "afterrender",
+                "scope": "me"
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string",
+                "scope": "string"
+            },
+            "name": "onWindowAfterRender",
+            "designerId": "4644515f-6be6-4351-892c-13a70c59565d"
+        }
+    ]
+}

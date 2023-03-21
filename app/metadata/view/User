@@ -1,0 +1,747 @@
+{
+    "type": "Ext.container.Viewport",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "container|align": "stretch",
+        "designer|userAlias": "user",
+        "designer|userClassName": "User",
+        "height": 250,
+        "layout": "vbox",
+        "style": "background:white;",
+        "width": 400
+    },
+    "configAlternates": {
+        "container|align": "string",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "height": "auto",
+        "layout": "string",
+        "width": "auto",
+        "style": "string"
+    },
+    "name": "MyViewport",
+    "designerId": "2c085e1c-4026-44dd-a300-86ef1721c884",
+    "viewControllerInstanceId": "b5eed733-bcf9-4897-8662-7f5d2f8be354",
+    "viewModelInstanceId": "6d852105-b4f5-4dd2-8043-9e5fd7cdc4bd",
+    "cn": [
+        {
+            "type": "Ext.container.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "container|align": "stretch",
+                "designer|displayName": "AppBar",
+                "height": 60,
+                "layout": "hbox"
+            },
+            "configAlternates": {
+                "container|align": "string",
+                "designer|displayName": "string",
+                "height": "auto",
+                "layout": "string"
+            },
+            "name": "MyContainer",
+            "designerId": "135aebb8-672f-4bd8-ac9e-d7649c6d9f96",
+            "cn": [
+                {
+                    "type": "Ext.container.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "container|align": "stretch",
+                        "designer|displayName": "Left",
+                        "layout": "vbox",
+                        "layout|flex": 1,
+                        "style": "padding:10px 0 10px 20px;"
+                    },
+                    "configAlternates": {
+                        "designer|displayName": "string",
+                        "layout|flex": "number",
+                        "container|align": "string",
+                        "layout": "string",
+                        "style": "string"
+                    },
+                    "name": "MyContainer6",
+                    "designerId": "4b4ca5b5-8694-437a-9e65-6e80191f918f",
+                    "cn": [
+                        {
+                            "type": "Ext.form.Label",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "id": "title-admin-user1",
+                                "layout|flex": 1
+                            },
+                            "configAlternates": {
+                                "id": "string",
+                                "layout|flex": "number"
+                            },
+                            "name": "MyLabel3",
+                            "designerId": "b5231131-f728-4747-a4fc-5333764cfc28"
+                        },
+                        {
+                            "type": "Ext.form.Label",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "id": "title-admin-rol1",
+                                "layout|flex": 1
+                            },
+                            "configAlternates": {
+                                "id": "string",
+                                "layout|flex": "number"
+                            },
+                            "name": "MyLabel4",
+                            "designerId": "4170e70e-25c1-490d-900a-7ab232ceefaa"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.container.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "container|align": "stretch",
+                        "container|pack": "end",
+                        "designer|displayName": "Right",
+                        "layout": "hbox",
+                        "layout|flex": 1,
+                        "style": "padding:5px; text-transform:uppercase; letter-spacing:0.1;"
+                    },
+                    "configAlternates": {
+                        "designer|displayName": "string",
+                        "layout|flex": "number",
+                        "container|align": "string",
+                        "container|pack": "string",
+                        "layout": "string",
+                        "style": "string"
+                    },
+                    "name": "MyContainer7",
+                    "designerId": "4628de4f-6d7d-4de7-baed-21fb70f37501",
+                    "cn": [
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "style": "border-radius:10px; margin:0 20px;",
+                                "text": "agregar"
+                            },
+                            "configAlternates": {
+                                "style": "string",
+                                "text": "string"
+                            },
+                            "name": "MyButton2",
+                            "designerId": "7970f564-e4fd-4e3f-8da6-20eb2906ad37",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onButtonClick",
+                                        "implHandler": [
+                                            "Ext.create('app.view.Task').show();"
+                                        ],
+                                        "name": "click",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onButtonClick",
+                                    "designerId": "ed6929f0-a460-418c-a02c-53dc9ca4ab26"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "style": "border-radius:10px;",
+                                "text": "cerrar sesión"
+                            },
+                            "configAlternates": {
+                                "style": "string",
+                                "text": "string"
+                            },
+                            "name": "MyButton1",
+                            "designerId": "620cdef4-4720-4f30-9dbd-141ddc764bf6",
+                            "cn": [
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "singin1",
+                                        "implHandler": [
+                                            "const access_token =localStorage.getItem('access_token');",
+                                            "",
+                                            "Ext.Ajax.request({",
+                                            "    url:'http://auth.test/api/auth/logout',",
+                                            "    method:\"POST\",",
+                                            "    headers:{",
+                                            "      'Authorization':`Bearer ${access_token}`",
+                                            "    },",
+                                            "    success:(response)=>{",
+                                            "        const result = Ext.decode(response.responseText);",
+                                            "        this.getView().destroy();",
+                                            "         localStorage.removeItem('access_token');",
+                                            "        localStorage.removeItem('ttl');",
+                                            "        Ext.create('app.view.App').show();",
+                                            "",
+                                            "    },",
+                                            "    failure:(response)=>{",
+                                            "        const result = Ext.decode(response.responseText);",
+                                            "        console.log(result);",
+                                            "    }",
+                                            "});",
+                                            "",
+                                            "",
+                                            ""
+                                        ],
+                                        "name": "click",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "singin1",
+                                    "designerId": "9d57cea0-db79-4c6d-887d-41186db218fe"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.container.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "container|align": "stretch",
+                "designer|displayName": "Main",
+                "layout": "hbox",
+                "layout|flex": 1
+            },
+            "configAlternates": {
+                "container|align": "string",
+                "designer|displayName": "string",
+                "layout": "string",
+                "layout|flex": "number"
+            },
+            "name": "MyContainer5",
+            "designerId": "dba917fa-42ca-414e-bf91-6abe31cce29a",
+            "cn": [
+                {
+                    "type": "Ext.container.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "container|align": "stretch",
+                        "designer|displayName": "Complete",
+                        "layout": "vbox",
+                        "layout|flex": 1,
+                        "style": "padding:0 5px;"
+                    },
+                    "configAlternates": {
+                        "designer|displayName": "string",
+                        "layout|flex": "number",
+                        "container|align": "string",
+                        "layout": "string",
+                        "style": "string"
+                    },
+                    "name": "MyContainer8",
+                    "designerId": "c4ec1e51-9d15-405b-b24e-e7a3b87e9357",
+                    "cn": [
+                        {
+                            "type": "Ext.grid.Panel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|displayName": "Table",
+                                "flex": 1,
+                                "height": "",
+                                "id": "table-complete",
+                                "title": "Completas"
+                            },
+                            "configAlternates": {
+                                "designer|displayName": "string",
+                                "title": "string",
+                                "flex": "number",
+                                "height": "auto",
+                                "id": "string"
+                            },
+                            "name": "MyGridPanel1",
+                            "designerId": "77f6a851-7724-424f-aba1-7f99d36bd83c",
+                            "cn": [
+                                {
+                                    "type": "Ext.grid.column.Column",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dataIndex": "content",
+                                        "designer|displayName": "name",
+                                        "flex": 1,
+                                        "text": "Tareas"
+                                    },
+                                    "configAlternates": {
+                                        "dataIndex": "datafield",
+                                        "text": "string",
+                                        "designer|displayName": "string",
+                                        "flex": "number"
+                                    },
+                                    "name": "MyColumn1",
+                                    "designerId": "3a90f604-a954-4833-87bd-aeeb709237ae"
+                                },
+                                {
+                                    "type": "Ext.view.Table",
+                                    "reference": {
+                                        "name": "viewConfig",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "name": "MyTable1",
+                                    "designerId": "2fa5fe5d-73b4-4d09-a5ea-0f16c95f4858"
+                                },
+                                {
+                                    "type": "Ext.grid.column.Action",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "text": "Eliminar"
+                                    },
+                                    "configAlternates": {
+                                        "style": "object",
+                                        "text": "string"
+                                    },
+                                    "name": "MyActionColumn1",
+                                    "designerId": "8762094e-6d78-4fcf-a52c-2c228cabfab3",
+                                    "cn": [
+                                        {
+                                            "type": "actioncolumnitem",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "iconCls": "x-fa fa-trash red"
+                                            },
+                                            "configAlternates": {
+                                                "iconCls": "string"
+                                            },
+                                            "name": "MyActionColumnItem1",
+                                            "designerId": "8ea82f1e-8c36-42c8-a23c-afc4d07e086e",
+                                            "cn": [
+                                                {
+                                                    "type": "fixedfunction",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "designer|params": [
+                                                            "view",
+                                                            "rowIndex",
+                                                            "colIndex",
+                                                            "item",
+                                                            "e",
+                                                            "record",
+                                                            "row"
+                                                        ],
+                                                        "fn": "handler",
+                                                        "implHandler": [
+                                                            "const access_token = localStorage.getItem('access_token');",
+                                                            "",
+                                                            "Ext.Ajax.request({",
+                                                            "    url:`http://auth.test/api/task/remove/${record.id}`,",
+                                                            "    method:'DELETE',",
+                                                            "    headers:{",
+                                                            "        'Authorization':`Bearer ${access_token}`",
+                                                            "    },",
+                                                            "    success:({responseText})=>{",
+                                                            "        const result = Ext.decode(responseText);",
+                                                            "        console.log(result);",
+                                                            "        view.grid.store.remove(record);",
+                                                            "    },",
+                                                            "    failure:({responseText})=>{",
+                                                            "        const result = Ext.decode(responseText);",
+                                                            "        console.log(result);",
+                                                            "    }",
+                                                            "});"
+                                                        ]
+                                                    },
+                                                    "configAlternates": {
+                                                        "designer|params": "typedarray",
+                                                        "fn": "string",
+                                                        "implHandler": "code"
+                                                    },
+                                                    "name": "handler",
+                                                    "designerId": "bf44ba55-d9eb-4638-b52f-bc01478c3953"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.grid.column.Action",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "text": "Completar"
+                                    },
+                                    "configAlternates": {
+                                        "text": "string"
+                                    },
+                                    "name": "MyActionColumn2",
+                                    "designerId": "e1f59294-520e-4336-8e8f-de40b4c1ce13",
+                                    "cn": [
+                                        {
+                                            "type": "actioncolumnitem",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "iconCls": "x-fa fa-check"
+                                            },
+                                            "configAlternates": {
+                                                "iconCls": "string"
+                                            },
+                                            "name": "MyActionColumnItem2",
+                                            "designerId": "381f232c-e829-4161-b21d-b258013ce4f8",
+                                            "cn": [
+                                                {
+                                                    "type": "fixedfunction",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "designer|params": [
+                                                            "view",
+                                                            "rowIndex",
+                                                            "colIndex",
+                                                            "item",
+                                                            "e",
+                                                            "record",
+                                                            "row"
+                                                        ],
+                                                        "fn": "handler",
+                                                        "implHandler": [
+                                                            "const access_token = localStorage.getItem('access_token');",
+                                                            "const tablein = Ext.getCmp('table-incomplete');",
+                                                            "console.log(tablein);",
+                                                            "",
+                                                            "Ext.Ajax.request({",
+                                                            "    url:`http://auth.test/api/task/update/${record.id}`,",
+                                                            "    method:'PUT',",
+                                                            "    headers:{",
+                                                            "        'Authorization':`Bearer ${access_token}`",
+                                                            "    },",
+                                                            "    params:{",
+                                                            "        status:1",
+                                                            "    },",
+                                                            "    success:({responseText})=>{",
+                                                            "        const result = Ext.decode(responseText);",
+                                                            "        view.grid.store.remove(record);",
+                                                            "        tablein.store.add(record);",
+                                                            "        console.log(result);",
+                                                            "    },",
+                                                            "    failure:({responseText})=>{",
+                                                            "        const result = Ext.decode(responseText);",
+                                                            "        console.log(result);",
+                                                            "    }",
+                                                            "});"
+                                                        ]
+                                                    },
+                                                    "configAlternates": {
+                                                        "designer|params": "typedarray",
+                                                        "fn": "string",
+                                                        "implHandler": "code"
+                                                    },
+                                                    "name": "handler",
+                                                    "designerId": "e4937834-24c6-4b3c-b800-e51864279b45"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.container.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "container|align": "stretch",
+                        "designer|displayName": "Incomplete",
+                        "layout": "vbox",
+                        "layout|flex": 1,
+                        "style": "padding: 0 5px;"
+                    },
+                    "configAlternates": {
+                        "designer|displayName": "string",
+                        "layout|flex": "number",
+                        "container|align": "string",
+                        "layout": "string",
+                        "style": "string"
+                    },
+                    "name": "MyContainer9",
+                    "designerId": "aa41d3bd-7882-453e-8f6d-f0c0bda4a3a7",
+                    "cn": [
+                        {
+                            "type": "Ext.grid.Panel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|displayName": "Table",
+                                "flex": 1,
+                                "id": "table-incomplete",
+                                "title": "Incompletas"
+                            },
+                            "configAlternates": {
+                                "designer|displayName": "string",
+                                "title": "string",
+                                "flex": "number",
+                                "id": "string"
+                            },
+                            "name": "MyGridPanel2",
+                            "designerId": "ddbd281b-4183-49eb-bb14-a879155a487c",
+                            "cn": [
+                                {
+                                    "type": "Ext.grid.column.Column",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dataIndex": "content",
+                                        "designer|displayName": "content",
+                                        "flex": 1,
+                                        "text": "Tareas"
+                                    },
+                                    "configAlternates": {
+                                        "dataIndex": "datafield",
+                                        "text": "string",
+                                        "designer|displayName": "string",
+                                        "flex": "number"
+                                    },
+                                    "name": "MyColumn2",
+                                    "designerId": "a24700e9-2316-47c1-aae7-abebf82ffd78"
+                                },
+                                {
+                                    "type": "Ext.view.Table",
+                                    "reference": {
+                                        "name": "viewConfig",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "name": "MyTable2",
+                                    "designerId": "76ad3f0a-3024-4289-9305-63df3230ddc6"
+                                },
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onTableincompleteCellClick",
+                                        "implHandler": [
+                                            "const access_token = localStorage.getItem('access_token');",
+                                            "const tablein = Ext.getCmp('table-complete');",
+                                            "console.log(tablein);",
+                                            "",
+                                            "Ext.Ajax.request({",
+                                            "    url:`http://auth.test/api/task/update/${record.id}`,",
+                                            "    method:'PUT',",
+                                            "    headers:{",
+                                            "        'Authorization':`Bearer ${access_token}`",
+                                            "    },",
+                                            "    params:{",
+                                            "        status:0",
+                                            "    },",
+                                            "    success:({responseText})=>{",
+                                            "        const result = Ext.decode(responseText);",
+                                            "        tableview.grid.store.remove(record);",
+                                            "        tablein.store.add(record);",
+                                            "        console.log(result);",
+                                            "    },",
+                                            "    failure:({responseText})=>{",
+                                            "        const result = Ext.decode(responseText);",
+                                            "        console.log(result);",
+                                            "    }",
+                                            "});"
+                                        ],
+                                        "name": "cellclick",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onTableincompleteCellClick",
+                                    "designerId": "fbac3a2f-8161-4888-a81e-462949bfce1c"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "viewcontrollereventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onViewportAfterRender",
+                "implHandler": [
+                    "const access_token =localStorage.getItem('access_token');",
+                    "const title = Ext.getCmp('title-admin-user1');",
+                    "const role = Ext.getCmp('title-admin-rol1');",
+                    "const table = Ext.getCmp('table-complete');",
+                    "const tablein = Ext.getCmp('table-incomplete');",
+                    "",
+                    "",
+                    "/*myaccount*/",
+                    "Ext.Ajax.request({",
+                    "    url:'http://auth.test/api/auth/myaccount',",
+                    "    method:'POST',",
+                    "    headers:{",
+                    "        'Authorization':`Bearer ${access_token}`,",
+                    "    },",
+                    "    success:(response)=>{",
+                    "        const result = Ext.decode(response.responseText);",
+                    "        title.el.dom.innerHTML = `Bienvenido ${result.data.name} ${result.data.lastname}`;",
+                    "        role.el.dom.innerHTML = `Tu rol es ${result.data.role}`;",
+                    "        console.log(result);",
+                    "",
+                    "        const filter = result.data.role.find((e)=>e=='user');",
+                    "        console.log(filter);",
+                    "        if(result.refresh){",
+                    "            localStorage.setItem('');",
+                    "        }",
+                    "    },",
+                    "    failure:(response)=>{",
+                    "        const result = Ext.decode(response.responseText);",
+                    "        console.log(result);",
+                    "    }",
+                    "});",
+                    "",
+                    "Ext.Ajax.request({",
+                    "    url:'http://auth.test/api/task/find/all',",
+                    "      headers:{",
+                    "        'Authorization':`Bearer ${access_token}`",
+                    "    },",
+                    "    success:(response)=>{",
+                    "        const result = Ext.decode(response.responseText);",
+                    "        console.log(result);",
+                    "",
+                    "        $taskComplete = result.data.filter((e)=>e.status===0);",
+                    "        $taskIncomplete = result.data.filter((e)=>e.status===1);",
+                    "",
+                    "",
+                    "        table.setStore($taskComplete);",
+                    "        tablein.setStore($taskIncomplete);",
+                    "",
+                    "",
+                    "    },",
+                    "    failure:(response)=>{",
+                    "        const result = Ext.decode(response.responseText);",
+                    "        console.log(result);",
+                    "    }",
+                    "});",
+                    "",
+                    ""
+                ],
+                "name": "afterrender",
+                "scope": "me"
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string",
+                "scope": "string"
+            },
+            "name": "onViewportAfterRender",
+            "designerId": "238d8161-afe6-4167-b056-0424f0f79e16"
+        }
+    ]
+}

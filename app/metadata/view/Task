@@ -1,0 +1,236 @@
+{
+    "type": "Ext.window.Window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "border": false,
+        "container|align": "stretch",
+        "designer|userAlias": "task",
+        "designer|userClassName": "Task",
+        "draggable": false,
+        "layout": "vbox",
+        "minWidth": 300,
+        "modal": true,
+        "overlapHeader": false,
+        "resizable": false,
+        "title": "Agregar nueva tarea"
+    },
+    "configAlternates": {
+        "border": "boolean",
+        "container|align": "string",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "layout": "string",
+        "overlapHeader": "boolean",
+        "title": "string",
+        "closable": "boolean",
+        "draggable": "boolean",
+        "modal": "boolean",
+        "resizable": "boolean",
+        "minWidth": "number"
+    },
+    "name": "MyWindow",
+    "designerId": "16903d10-01ba-42e2-bb66-1044ecb05cc5",
+    "viewControllerInstanceId": "a44a3674-a616-4400-8e3c-c3a0995f3fa6",
+    "viewModelInstanceId": "11735846-fa07-4182-8bed-1fee06f558ff",
+    "cn": [
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "bodyPadding": 10,
+                "container|align": "stretch",
+                "frameHeader": false,
+                "header": false,
+                "layout": "vbox",
+                "title": "My Form"
+            },
+            "configAlternates": {
+                "bodyPadding": "auto",
+                "frameHeader": "boolean",
+                "header": "boolean",
+                "layout": "string",
+                "title": "string",
+                "container|align": "string"
+            },
+            "name": "MyForm1",
+            "designerId": "2849f7a5-5473-4f73-bc0d-8dbe626ab279",
+            "cn": [
+                {
+                    "type": "Ext.form.field.TextArea",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Label",
+                        "hideLabel": true,
+                        "layout|flex": 1,
+                        "name": "content"
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "hideLabel": "boolean",
+                        "layout|flex": "number",
+                        "name": "string"
+                    },
+                    "name": "MyTextArea",
+                    "designerId": "a49d6e8d-6f05-40ec-865a-9f0d164196a9"
+                },
+                {
+                    "type": "Ext.container.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "container|align": "stretch",
+                        "container|pack": "center",
+                        "height": 86,
+                        "layout": "vbox"
+                    },
+                    "configAlternates": {
+                        "container|align": "string",
+                        "container|pack": "string",
+                        "layout": "string",
+                        "height": "auto"
+                    },
+                    "name": "MyContainer4",
+                    "designerId": "4d46f590-9aa1-4201-8af6-349e39731f93",
+                    "cn": [
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "text": "ACEPTAR",
+                                "width": 150
+                            },
+                            "configAlternates": {
+                                "text": "string",
+                                "width": "auto"
+                            },
+                            "name": "MyButton4",
+                            "designerId": "9bb2d312-84c4-4993-8d50-1d94b8cea79b",
+                            "cn": [
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onButtonClick",
+                                        "implHandler": [
+                                            "const access_token = localStorage.getItem('access_token');",
+                                            "const table = Ext.getCmp('table-complete');",
+                                            "const form = button.up('form').getForm();",
+                                            "const { content } = form.getValues();",
+                                            "",
+                                            "Ext.Ajax.request({",
+                                            "    url:'http://auth.test/api/task/add',",
+                                            "    method:'POST',",
+                                            "    headers:{",
+                                            "        'Authorization':`Bearer ${access_token}`",
+                                            "    },",
+                                            "    params:{",
+                                            "        content",
+                                            "    },",
+                                            "    success:({responseText})=>{",
+                                            "        const result = Ext.decode(responseText);",
+                                            "        if(result.success){",
+                                            "            table.store.add(result.data);",
+                                            "            this.getView().destroy();",
+                                            "        }",
+                                            "    },",
+                                            "    failure:({responseText})=>{",
+                                            "        const result = Ext.decode(responseText);",
+                                            "        console.log(result);",
+                                            "    }",
+                                            "});"
+                                        ],
+                                        "name": "click",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onButtonClick",
+                                    "designerId": "83bf1015-fc53-4bb7-9dc3-ef653a9190bf"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null,
+                                "style": "margin-top:10px;",
+                                "text": "CANCELAR"
+                            },
+                            "configAlternates": {
+                                "layout|flex": "number",
+                                "style": "string",
+                                "text": "string"
+                            },
+                            "name": "MyButton3",
+                            "designerId": "72147780-dc7e-491f-b202-6690a89150c5",
+                            "cn": [
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onButtonClickCancel",
+                                        "implHandler": [
+                                            "",
+                                            "this.getView().destroy();",
+                                            "",
+                                            "",
+                                            "",
+                                            "",
+                                            ""
+                                        ],
+                                        "name": "click",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onButtonClickCancel",
+                                    "designerId": "a8c01fa4-5d4d-4c6f-a717-69026b21b494"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
